@@ -22,7 +22,7 @@ Write-Warning -Message "Gateway is set to $gateway and will be changed to $newro
 Swap-Gateway | Out-file $Log -Append
 
 }
-else {
+elseif ($gateway -eq $newroute) {
 Write-Warning -Message "Gateway is already set to $newroute and needs no change"
 
 }
